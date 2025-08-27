@@ -1,3 +1,4 @@
+import Advantages from "./Advantages";
 import Hero from "./Hero";
 import Subscribe from "./Subscribe";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Hero />
       <Subscribe />
+      <Advantages />
     </>
   );
 }
