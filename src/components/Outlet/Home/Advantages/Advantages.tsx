@@ -1,11 +1,15 @@
+import Circle from "../../Circle";
 import { advantagesData } from "./advantages.data";
 import * as styles from "./style";
 
 export default function Advantages() {
   return (
     <section css={styles.section}>
-      <h2>{advantagesData.title}</h2>
-      <ul>
+      <div css={styles.titleBlock}>
+        <Circle />
+        <h2 css={styles.title}>{advantagesData.title}</h2>
+      </div>
+      <ul css={styles.list}>
         {advantagesData.items.map(({ id, title, description, img }) => (
           <li key={id}>
             <img src={img} alt={title} />

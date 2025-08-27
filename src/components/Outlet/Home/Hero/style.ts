@@ -36,21 +36,22 @@ export const hero = css`
   }
 
   p {
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 32px;
   }
 
   button {
-    background-color: transparent;
-    border: 2px solid white;
+    background-color: #232e7a;
     padding: 20px 32px;
     font-size: 18px;
     cursor: pointer;
     transition: all 0.3s;
     font-weight: bold;
+    border: none;
+    border-radius: 8px;
 
     &:hover {
-      background-color: white;
+      background-color: #f1e140;
       color: black;
     }
   }
