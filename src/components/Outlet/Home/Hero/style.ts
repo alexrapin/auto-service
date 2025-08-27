@@ -5,7 +5,7 @@ export const hero = css`
   background-image: url(${heroData.bgImage});
   background-size: cover;
   background-position: center;
-  padding: 250px 0;
+  padding: 200px 0;
   color: white;
 
   display: flex;
