@@ -3,7 +3,7 @@ import * as styles from "./style";
 
 export default function Header() {
   return (
-    <header>
+    <header css={styles.section}>
       <div css={styles.top}>
         <img src={headerData.logoImg} alt="Logo" css={styles.logo} />
         <div>

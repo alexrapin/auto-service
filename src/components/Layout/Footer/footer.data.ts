@@ -1,5 +1,5 @@
 export const footerData = {
-  logoImg: './images/header/Logo.png',
+  logoImg: '/images/header/Logo.png',
   phoneList: { label: '+38 (067) 721-69-45', href: 'tel:+380677216945' },
   email: 'alexautoband@gmail.com',
   address: 'м. Миколаїв, Троїцька 109б',
@@ -13,4 +13,10 @@ export const footerData = {
     { id: 5, label: 'Політика конфіденційності', url: '/privacy-policy' },
     { id: 6, label: 'Публічна оферта', url: '/terms-and-conditions' },
   ],
+  images: {
+    phone: '/images/footer/phone.svg',
+    gmail: '/images/footer/gmail.svg',
+    location: '/images/footer/location.svg',
+    time: '/images/footer/time.svg',
+  },
 };

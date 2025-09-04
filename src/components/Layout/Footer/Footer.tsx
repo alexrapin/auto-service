@@ -25,7 +25,7 @@ export default function Footer() {
           <div css={styles.phones}>
             <div css={styles.phoneRow}>
               <img
-                src="./images/footer/phone.svg"
+                src={footerData.images.phone}
                 alt="phone"
                 css={styles.contactIcon}
               />
@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
           <div css={styles.emailRow}>
             <img
-              src="./images/footer/gmail.svg"
+              src={footerData.images.gmail}
               alt="mail"
               css={styles.contactIcon}
             />
@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
           <div css={styles.addressRow}>
             <img
-              src="./images/footer/location.svg"
+              src={footerData.images.location}
               alt="address"
               css={styles.contactIcon}
             />
@@ -54,7 +54,7 @@ export default function Footer() {
             {footerData.workTime.map((row, idx) => (
               <div css={styles.workTimeRow} key={idx}>
                 <img
-                  src="./images/footer/time.svg"
+                  src={footerData.images.time}
                   alt="clock"
                   css={styles.contactIcon}
                 />

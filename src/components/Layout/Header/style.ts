@@ -1,5 +1,10 @@
 import { css } from "@emotion/react";
 
+export const section = css`
+  background: white;
+  color: black;
+`;
+
 export const top = css`
   display: flex;
   align-items: center;

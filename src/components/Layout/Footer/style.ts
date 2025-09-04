@@ -4,6 +4,7 @@ export const footer = css`
   background: #f6f4f5;
   padding-block: 50px;
   width: 100%;
+  color: black;
 `;
 
 export const top = css`

@@ -49,6 +49,7 @@ export const hero = css`
     font-weight: bold;
     border: none;
     border-radius: 8px;
+    color: white;
 
     &:hover {
       background-color: #f1e140;
