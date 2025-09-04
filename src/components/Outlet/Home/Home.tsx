@@ -1,5 +1,7 @@
 import Advantages from "./Advantages";
+import FormBlock from "./FormBlock";
 import Hero from "./Hero";
+import Services from "./Services";
 import Subscribe from "./Subscribe";
 import TextBlock from "./TextBlock";
 
@@ -10,6 +12,8 @@ export default function Home() {
       <Subscribe />
       <Advantages />
       <TextBlock />
+      <Services />
+      <FormBlock />
     </>
   );
 }
