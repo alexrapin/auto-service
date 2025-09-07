@@ -1,21 +1,20 @@
 /** @type {import('next').NextConfig} */
-import withExportImages from "next-export-optimize-images";
+const repoName = "auto-service";
 
-const repoName = "auto-service"; // ⚡️ имя твоего репозитория на GitHub
-
-const nextConfig = withExportImages({
-  // важливо для GitHub Pages
+const nextConfig = {
   output: "export",
-  distDir: "out", // щоб Next.js збирав у "out" (GitHub Pages читає звідти)
+  distDir: "out",
 
-  // базовий шлях (щоб працювали стилі, картинки, роутинг)
   basePath: `/${repoName}`,
   assetPrefix: `/${repoName}/`,
 
-  // компілятор для Emotion (щоб SSR стилі не губилися)
   compiler: {
     emotion: true,
   },
-});
+
+  images: {
+    unoptimized: true, // GitHub Pages не підтримує server-side image optimization
+  },
+};
 
 export default nextConfig;
