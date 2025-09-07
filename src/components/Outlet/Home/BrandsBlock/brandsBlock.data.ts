@@ -1,6 +1,6 @@
 export const brandsBlockData = {
   title: "МАРКИ АВТОМОБІЛІВ, ЯКІ ОБСЛУГОВУЄ АВТОСЕРВІС AUTOBAND",
-  logos: '/images/brandsBlock/brands.png',
+  logos: './images/brandsBlock/brands.png',
   // Видимий контент
   visibleContent: [
     {

@@ -1,5 +1,5 @@
 export const footerData = {
-  logoImg: '/images/header/Logo.png',
+  logoImg: './images/header/Logo.png',
   phoneList: { label: '+38 (067) 721-69-45', href: 'tel:+380677216945' },
   email: 'alexautoband@gmail.com',
   address: 'м. Миколаїв, Троїцька 109б',
