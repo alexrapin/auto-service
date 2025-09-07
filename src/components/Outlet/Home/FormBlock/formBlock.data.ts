@@ -2,8 +2,8 @@ export const formBlockData = {
   bgImage: "./images/formBlock/imgCar.png",
   fields: [
     { name: "name", placeholder: "Ім'я", type: "text" },
-    { name: "car", placeholder: "Марка авто", type: "text" },
-    { name: "phone", placeholder: "Телефон", type: "tel" },
+    { name: "phone", placeholder: "Телефон", type: "text" },
+    { name: "comment", placeholder: "Коментар", type: "text" },
   ],
   contact: {
     title:

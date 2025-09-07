@@ -4,25 +4,25 @@ export const subscribeData = {
     {
       id: 1,
       title: 'Обслуговування',
-      url: '/',
+      url: '#services',
       img: './images/subscribe/1.svg',
     },
     {
       id: 2,
       title: 'Ремонт авто',
-      url: '/',
+      url: '#fix',
       img: './images/subscribe/2.svg',
     },
     {
       id: 3,
       title: 'Діагностика',
-      url: '/',
+      url: '#diagnostics',
       img: './images/subscribe/3.svg',
     },
     {
       id: 4,
       title: 'Інші послуги',
-      url: '/',
+      url: '#services',
       img: './images/subscribe/4.svg',
     }
   ],

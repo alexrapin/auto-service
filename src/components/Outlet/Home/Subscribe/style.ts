@@ -15,12 +15,16 @@ export const section = (theme: Theme) => css`
   }
 `;
 
-export const nav = css`
+export const nav = (theme: Theme) => css`
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
+
+  ${theme.breakpoints.down("md")} {
+    gap: 10px;
+  }
 `;
 
 export const navLink = (theme: Theme) => css`
@@ -82,6 +86,7 @@ export const navText = (theme: Theme) => css`
 
   ${theme.breakpoints.down("sm")} {
     font-size: 11px;
+    height: 50px;
   }
 `;
 

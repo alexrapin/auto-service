@@ -67,7 +67,7 @@ export const hiddenContent = (isExpanded: boolean) => css`
 
 export const button =  css`
   padding: 14px 32px;
-  background: #27348b;
+  background: #002469;
   color: white;
   text-transform: uppercase;
   font-weight: bold;
@@ -78,6 +78,7 @@ export const button =  css`
   transition: background 0.3s ease;
 
   &:hover {
-    background: #1a236a;
+    background: #efe23b;
+    color: #002469;
   }
 `;

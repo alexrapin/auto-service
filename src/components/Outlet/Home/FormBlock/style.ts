@@ -84,7 +84,7 @@ export const carImg = (theme: Theme) => css`
 
 export const right = css`
   flex: 1;
-  background: #27348b;
+  background: #002469;
   border-radius: 16px;
   padding: 32px 24px;
   color: #fff;

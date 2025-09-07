@@ -7,11 +7,9 @@ export const footerData = {
   text: 'Замовити дзвінок',
   links: [
     { id: 1, label: 'Головна', url: '/' },
-    { id: 2, label: 'Наші послуги', url: '/about' },
-    { id: 3, label: 'Про нас', url: '/contact' },
-    { id: 4, label: 'Контакти', url: '/contact' },
-    { id: 5, label: 'Політика конфіденційності', url: '/privacy-policy' },
-    { id: 6, label: 'Публічна оферта', url: '/terms-and-conditions' },
+    { id: 2, label: 'Наші послуги', url: '#services' },
+    { id: 3, label: 'Про нас', url: '#about' },
+    { id: 4, label: 'Контакти', url: '#contact' },
   ],
   images: {
     phone: '/images/footer/phone.svg',

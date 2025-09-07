@@ -29,6 +29,11 @@ export const logoBlock = css`
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const ul = css`
@@ -44,6 +49,13 @@ export const li = css`
   font-size: 16px;
   font-weight: 500;
   padding-block: 2px;
+
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+    color: #222e7a;
+  }
 `;
 
 export const contactsBlock = css`
@@ -64,6 +76,13 @@ export const phoneRow = css`
   align-items: center;
   gap: 8px;
   font-size: 15px;
+
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.02);
+    color: #222e7a;
+  }
 `;
 
 export const contactIcon = css`
@@ -77,6 +96,12 @@ export const emailRow = css`
   align-items: center;
   gap: 8px;
   font-size: 15px;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.02);
+    color: #222e7a;
+  }
 `;
 
 export const addressRow = css`
@@ -84,6 +109,13 @@ export const addressRow = css`
   align-items: center;
   gap: 8px;
   font-size: 15px;
+
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.02);
+    color: #222e7a;
+  }
 `;
 
 export const workTime = css`
@@ -136,7 +168,8 @@ export const callBtn = css`
   transition: background 0.2s;
   border: none;
   &:hover {
-    background: #1a225c;
+    background: #efe23b;
+    color: #232e7a;
   }
 `;
 

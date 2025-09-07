@@ -13,13 +13,17 @@ export const titleBlock = css`
   position: relative;
 `;
 
-export const title = css`
+export const title = (theme: Theme) => css`
   font-size: 28px;
   font-weight: bold;
   text-transform: uppercase;
   position: absolute;
   top: 30px;
   left: 45px;
+
+  ${theme.breakpoints.down("md")} {
+    font-size: 22px;
+  }
 `;
 
 export const list = (theme: Theme) => css`
@@ -62,6 +66,7 @@ export const list = (theme: Theme) => css`
 
     ${theme.breakpoints.down("md")} {
     flex-direction: column;
+    padding-top: 40px;
     gap: 30px;
 
     li {

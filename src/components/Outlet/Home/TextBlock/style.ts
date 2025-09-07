@@ -8,6 +8,9 @@ export const section = (theme: Theme) => css`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   position: relative;
 

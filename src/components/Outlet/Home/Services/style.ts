@@ -39,7 +39,7 @@ export const list = (theme: Theme) => css`
     transition: all 0.3s ease;
 
     &:hover {
-      background: #4d5bbd;
+  background: #002469;
       box-shadow: 2px 8px 32px rgba(0, 0, 0, 0.12);
     }
 

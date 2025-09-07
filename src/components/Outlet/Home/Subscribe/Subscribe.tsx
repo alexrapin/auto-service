@@ -10,8 +10,8 @@ export default function Subscribe() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   return (
-    <section css={styles.section(theme)}>
-      <nav css={styles.nav}>
+    <section id='fix' css={styles.section(theme)}>
+      <nav css={styles.nav(theme)}>
         {subscribeData.nav.map(({id, title, url, img}) => (
           <Link
             css={styles.navLink(theme)}
@@ -42,8 +42,8 @@ export default function Subscribe() {
           </div>
           <div css={styles.inputsContainer}>
             <input css={styles.input} type="text" placeholder="Ім'я" />
-            <input css={styles.input} type="text" placeholder="Марка авто" />
             <input css={styles.input} type="text" placeholder="Телефон" />
+            <input css={styles.input} type="text" placeholder="Коментар" />
             <button css={styles.button} type="submit">Записатись</button>
           </div>
         </form>

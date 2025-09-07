@@ -9,7 +9,7 @@ export default function Advantages() {
     <section css={styles.section}>
       <div css={styles.titleBlock}>
         <Circle />
-        <h2 css={styles.title}>{advantagesData.title}</h2>
+        <h2 css={styles.title(theme)}>{advantagesData.title}</h2>
       </div>
       <ul css={styles.list(theme)}>
         {advantagesData.items.map(({ id, title, description, img }) => (

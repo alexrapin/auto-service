@@ -4,8 +4,8 @@ export const headerData = {
   text: 'Замовити дзвінок',
   links: [
     { label: 'Головна', url: '/'},
-    { label: 'Наші послуги', url: '/services'},
-    { label: 'Про нас', url: '/about'},
-    { label: 'Контакти', url: '/contacts'},
+    { label: 'Наші послуги', url: '#services'},
+    { label: 'Про нас', url: '#about'},
+    { label: 'Контакти', url: '#contacts'},
   ]
 }

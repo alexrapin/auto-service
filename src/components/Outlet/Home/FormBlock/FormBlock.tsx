@@ -5,7 +5,7 @@ import * as styles from "./style";
 
 export default function FormBlock() {
   return (
-    <section css={styles.section(theme)}>
+    <section id='diagnostics' css={styles.section(theme)}>
       <div css={styles.left}>
         <h2 css={styles.title(theme)}>{formBlockData.contact.title}</h2>
         <p css={styles.description(theme)}>{formBlockData.contact.description}</p>
