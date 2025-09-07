@@ -1,35 +1,38 @@
+/* eslint-disable @next/next/no-img-element */
 import { subscribeData } from "./subscribe.data";
 import * as styles from "./style";
 
 import { useState } from "react";
+import theme from "@/constants/theme";
+import Link from "next/link";
 
 export default function Subscribe() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   return (
-    <section css={styles.section}>
+    <section css={styles.section(theme)}>
       <nav css={styles.nav}>
         {subscribeData.nav.map(({id, title, url, img}) => (
-          <a
-            css={styles.navLink}
+          <Link
+            css={styles.navLink(theme)}
             key={id}
             href={url}
             onMouseEnter={() => setHoveredId(String(id))}
             onMouseLeave={() => setHoveredId(null)}
           >
             <img
-              css={styles.navImg}
+              css={styles.navImg(theme)}
               src={img}
               alt={title}
               data-active={hoveredId === String(id)}
             />
-            <div css={styles.circle}></div>
-            <span css={styles.navText}>{title}</span>
-          </a>
+            <div css={styles.circle(theme)}></div>
+            <span css={styles.navText(theme)}>{title}</span>
+          </Link>
         ))}
         <div css={styles.line}></div>
       </nav>
-      <div css={styles.subscribeContainer}>
+      <div css={styles.subscribeContainer(theme)}>
         <img src={subscribeData.image} alt="garageImage" css={styles.image} />
         <form css={styles.form}>
           <div>

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { headerData } from "./header.data";
 import * as styles from "./style";
 

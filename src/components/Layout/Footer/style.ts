@@ -1,4 +1,5 @@
-import { css } from '@emotion/react';
+import { css } from "@emotion/react";
+import { Theme } from "@mui/material/styles";
 
 export const footer = css`
   background: #f6f4f5;
@@ -7,14 +8,20 @@ export const footer = css`
   color: black;
 `;
 
-export const top = css`
+export const top = (theme: Theme) => css`
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1300px;
+  padding: 0 50px;
   margin: 0 auto;
   gap: 32px;
+
+  ${theme.breakpoints.down("md")} {
+    flex-direction: column;
+    padding: 0 20px;
+  }
 `;
 
 export const logoBlock = css`
@@ -103,11 +110,16 @@ export const nav = css`
   margin: 0 auto;
 `;
 
-export const callBlock = css`
+export const callBlock = (theme: Theme) => css`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+
+  ${theme.breakpoints.down("md")} {
+    width: 100%;
+    justify-content: flex-end;
+  }
 `;
 
 export const callBtn = css`

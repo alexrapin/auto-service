@@ -1,32 +1,34 @@
 import { css } from "@emotion/react";
+import { Theme } from "@mui/material";
 
 export const section = css`
-  max-width: 1240px;
-  padding: 40px 20px;
-  margin: 60px auto 40px;
+  max-width: 1300px;
+  padding: 40px 50px;
+  margin: 0 auto 40px;
 
   position: relative;
 `;
 
 export const titleBlock = css`
-  position: absolute;
-  top: 0;
-  left: 60px;
+  position: relative;
 `;
 
 export const title = css`
   font-size: 28px;
   font-weight: bold;
   text-transform: uppercase;
+  position: absolute;
+  top: 30px;
+  left: 45px;
 `;
 
-export const list = css`
+export const list = (theme: Theme) => css`
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   gap: 20px;
-  padding-top: 70px;
+  padding-top: 30px;
 
   li {
     background: white;
@@ -55,6 +57,16 @@ export const list = css`
     p {
       font-size: 16px;
       color: #666;
+    }
+  }
+
+    ${theme.breakpoints.down("md")} {
+    flex-direction: column;
+    gap: 30px;
+
+    li {
+      width: 100%;
+      min-height: 200px;
     }
   }
 `;

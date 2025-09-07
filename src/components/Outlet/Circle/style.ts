@@ -1,9 +1,9 @@
 import { css } from "@emotion/react";
 
 export const circle = css`
-  position: absolute;
+  /* position: absolute;
   top: -34px;
-  left: -40px;
+  left: -40px; */
   width: 100px;
   height: 100px;
   background: #232e7a;

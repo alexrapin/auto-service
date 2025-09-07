@@ -3,6 +3,7 @@ import Link from "next/link";
 import Circle from "../../Circle";
 import { servicesData } from "./services.data";
 import * as styles from "./style";
+import theme from "@/constants/theme";
 
 export default function Services() {
   return (
@@ -11,7 +12,7 @@ export default function Services() {
         <Circle />
         <h2 css={styles.title}>{servicesData.title}</h2>
       </div>
-      <ul css={styles.list}>
+      <ul css={styles.list(theme)}>
         {servicesData.items.map(({ id, title, descriptionTitle, description, img }) => (
           <li key={id}>
             <Link css={styles.link} href={`/services/${id}`}>

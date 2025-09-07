@@ -9,7 +9,7 @@ export const subscribeData = {
     },
     {
       id: 2,
-      title: 'Ремонт авто в Миколаєві',
+      title: 'Ремонт авто',
       url: '/',
       img: './images/subscribe/2.svg',
     },

@@ -1,13 +1,18 @@
 import { css } from "@emotion/react";
+import { Theme } from "@mui/material";
 
-export const section = css`
-  max-width: 1240px;
-  padding: 40px 20px;
+export const section = (theme: Theme) => css`
+  max-width: 1300px;
+  padding: 40px 50px;
   margin: 0 auto;
 
   display: flex;
   flex-direction: column;
   gap: 50px;
+
+  ${theme.breakpoints.down("md")} {
+    padding-inline: 20px;
+  }
 `;
 
 export const nav = css`
@@ -18,7 +23,7 @@ export const nav = css`
   gap: 20px;
 `;
 
-export const navLink = css`
+export const navLink = (theme: Theme) => css`
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -34,9 +39,13 @@ export const navLink = css`
       background: #f1e140;
     }
   }
+
+  ${theme.breakpoints.down("sm")} {
+    gap: 8px;
+  }
 `;
 
-export const navImg = css`
+export const navImg = (theme: Theme) => css`
   width: 60px;
   height: 60px;
   padding: 10px;
@@ -47,19 +56,33 @@ export const navImg = css`
   &[data-active="true"] {
     background: #f1e140;
   }
+
+  ${theme.breakpoints.down("sm")} {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
-export const circle = css`
+export const circle = (theme: Theme) => css`
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background: #f1e140;
+
+  ${theme.breakpoints.down("sm")} {
+    width: 10px;
+    height: 10px;
+  }
 `;
 
-export const navText = css`
+export const navText = (theme: Theme) => css`
   font-size: 15px;
   font-weight: bold;
   text-align: center;
+
+  ${theme.breakpoints.down("sm")} {
+    font-size: 11px;
+  }
 `;
 
 export const line = css`
@@ -79,10 +102,14 @@ export const image = css`
   object-fit: cover;
 `;
 
-export const subscribeContainer = css`
+export const subscribeContainer = (theme: Theme) => css`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+
+  ${theme.breakpoints.down("md")} {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const form = css`

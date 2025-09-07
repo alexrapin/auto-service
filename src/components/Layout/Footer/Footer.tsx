@@ -1,12 +1,12 @@
-/* eslint-disable react/no-array-index-key */
 /* eslint-disable @next/next/no-img-element */
+import theme from "@/constants/theme";
 import { footerData } from "./footer.data";
 import * as styles from "./style";
 
 export default function Footer() {
   return (
     <footer css={styles.footer}>
-      <div css={styles.top}>
+      <div css={styles.top(theme)}>
         <div css={styles.logoBlock}>
           <img src={footerData.logoImg} alt="Logo" css={styles.logo} />
         </div>
@@ -51,8 +51,8 @@ export default function Footer() {
             <span>{footerData.address}</span>
           </div>
           <div css={styles.workTime}>
-            {footerData.workTime.map((row, idx) => (
-              <div css={styles.workTimeRow} key={idx}>
+            {footerData.workTime.map((row) => (
+              <div css={styles.workTimeRow} key={row}>
                 <img
                   src={footerData.images.time}
                   alt="clock"
@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div css={styles.callBlock}>
+        <div css={styles.callBlock(theme)}>
           <a css={styles.callBtn} href="tel:+380677216945">
             {footerData.text}
           </a>

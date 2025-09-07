@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+import theme from "@/constants/theme";
 import Circle from "../../Circle";
 import { advantagesData } from "./advantages.data";
 import * as styles from "./style";
@@ -9,7 +11,7 @@ export default function Advantages() {
         <Circle />
         <h2 css={styles.title}>{advantagesData.title}</h2>
       </div>
-      <ul css={styles.list}>
+      <ul css={styles.list(theme)}>
         {advantagesData.items.map(({ id, title, description, img }) => (
           <li key={id}>
             <img src={img} alt={title} />

@@ -1,10 +1,11 @@
 import { textBlockData } from "./textBlock.data";
 import * as styles from "./style";
+import theme from "@/constants/theme";
 
 export default function TextBlock() {
   return (
     <section
-      css={styles.section}
+      css={styles.section(theme)}
       style={{ backgroundImage: `url(${textBlockData.img})` }}
     >
       <div css={styles.textBlock}>

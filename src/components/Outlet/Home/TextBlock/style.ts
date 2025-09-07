@@ -1,7 +1,8 @@
 import { css } from "@emotion/react";
+import { Theme } from "@mui/material";
 
-export const section = css`
-  padding: 40px 20px;
+export const section = (theme: Theme) => css`
+  padding: 40px 50px;
   min-height: 500px;
 
   display: flex;
@@ -20,10 +21,14 @@ export const section = css`
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
   }
+
+  ${theme.breakpoints.down("md")} {
+    padding: 40px 20px;
+  }
 `;
 
 export const textBlock = css`
-  max-width: 1240px;
+  max-width: 1200px;
   color: white;
 
   display: flex;
@@ -37,6 +42,7 @@ export const title = css`
   font-size: 28px;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
 `;
 
 export const description = css`
