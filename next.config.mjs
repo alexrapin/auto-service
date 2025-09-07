@@ -16,11 +16,6 @@ const nextConfig = withExportImages({
   compiler: {
     emotion: true,
   },
-
-  // уникаємо помилок з "Image Optimization" (бо GitHub Pages — статичний хостинг)
-  images: {
-    unoptimized: true,
-  },
 });
 
 export default nextConfig;
