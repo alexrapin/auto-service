@@ -120,7 +120,6 @@ export const subscribeContainer = (theme: Theme) => css`
 export const form = css`
   display: flex;
   flex-direction: column;
-  gap: 40px;
   background: #232e7a;
   color: #ffffff;
   padding: 30px;
@@ -144,6 +143,7 @@ export const text = css`
   font-size: 16px;
   padding-top: 12px;
   max-width: 400px;
+  margin-bottom: 24px;
 `;
 
 export const inputsContainer = css`

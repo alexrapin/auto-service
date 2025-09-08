@@ -16,20 +16,40 @@ export default function Subscribe() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
+  const formatPhone = (value: string) => {
+    let digits = value.replace(/\D/g, "");
+    if (digits.startsWith("")) digits = digits.slice(3);
+    if (!digits.startsWith("0")) digits = "0" + digits;
+    digits = digits.slice(0, 10);
+    let formatted = "+38 (";
+    formatted += digits.slice(0, 3);
+    if (digits.length > 3) formatted += ") " + digits.slice(3, 6);
+    if (digits.length > 6) formatted += "-" + digits.slice(6, 8);
+    if (digits.length > 8) formatted += "-" + digits.slice(8, 10);
+    return formatted;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
     try {
+      // чистимо номер для бекенду
+      const payload = { ...formData };
+      if (formData.phone) {
+        const digits = formData.phone.replace(/\D/g, ""); // "671234567"
+        payload.phone = "+" + digits; // ✅ "+380671234567"
+      }
+
       const res = await fetch("/api/sendMessage", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       if (res.ok) {
         setSuccess(true);
-        setFormData({ name: "", phone: "", comment: "" });
+        setFormData({ name: "", phone: "+38 (0", comment: "" });
       }
     } catch (err) {
       console.error("Помилка:", err);
@@ -64,13 +84,16 @@ export default function Subscribe() {
       <div css={styles.subscribeContainer(theme)}>
         <img src={subscribeData.image} alt="garageImage" css={styles.image} />
         <form css={styles.form} onSubmit={handleSubmit}>
-          <h2 css={styles.title}>Запис на сервіс</h2>
+          <h2 css={styles.title}>{subscribeData.formData.title}</h2>
+          <p css={styles.subtitle}>{subscribeData.formData.subtitle}</p>
+          <p css={styles.text}>{subscribeData.formData.text}</p>
           <div css={styles.inputsContainer}>
             <input
               css={styles.input}
               type="text"
               placeholder="Ім'я"
               value={formData.name}
+              required
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
               }
@@ -80,15 +103,32 @@ export default function Subscribe() {
               type="text"
               placeholder="Телефон"
               value={formData.phone}
+              required
               onChange={(e) =>
-                setFormData({ ...formData, phone: e.target.value })
+                setFormData({
+                  ...formData,
+                  phone: formatPhone(e.target.value),
+                })
               }
+              onClick={(e) => {
+                const input = e.target as HTMLInputElement;
+                if (input.selectionStart !== null && input.selectionStart < 7) {
+                  input.setSelectionRange(7, 7);
+                }
+              }}
+              onFocus={(e) => {
+                const input = e.target as HTMLInputElement;
+                if (input.selectionStart !== null && input.selectionStart < 7) {
+                  input.setSelectionRange(7, 7);
+                }
+              }}
             />
             <input
               css={styles.input}
               type="text"
               placeholder="Коментар"
               value={formData.comment}
+              required
               onChange={(e) =>
                 setFormData({ ...formData, comment: e.target.value })
               }
