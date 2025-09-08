@@ -49,9 +49,22 @@ export default function HomePage() {
                 "@type": "PostalAddress",
                 addressLocality: "Миколаїв",
                 streetAddress: "Троїцька 109б",
+                postalCode: "54000",
+                addressCountry: "UA",
               },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: "46.971013",
+                longitude: "32.067455",
+              },
+              openingHours: "Mo-Sa 09:00-18:00",
               url: "https://autoband.com.ua",
               priceRange: "від 300 ₴",
+              serviceOffered: [
+                "Ремонт ходової",
+                "Заміна масла",
+                "Ремонт двигуна",
+              ],
             }),
           }}
         />
