@@ -61,9 +61,7 @@ export const hero = (theme: Theme) => css`
   }
 
   ${theme.breakpoints.down("md")} {
-    h1 {
-      /* text-align: center; */
-    }
+    padding: 100px 0;
   }
 `;
 
