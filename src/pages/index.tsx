@@ -69,6 +69,7 @@ export default function HomePage() {
           }}
         />
 
+        <link rel="canonical" href="https://autoband.com.ua/" />
         <link rel="icon" href="./favicon.ico" />
       </Head>
 

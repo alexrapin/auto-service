@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Главная страница -->
   <url>
     <loc>https://autoband.com.ua/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Раздел диагностики -->
   <url>
-    <loc>https://autoband.com.ua/#diagnostics</loc>
+    <loc>https://autoband.com.ua/diagnostics</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Раздел услуг -->
   <url>
-    <loc>https://autoband.com.ua/#services</loc>
+    <loc>https://autoband.com.ua/services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Раздел брендов -->
   <url>
-    <loc>https://autoband.com.ua/#brands</loc>
+    <loc>https://autoband.com.ua/brands</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Контакты -->
   <url>
-    <loc>https://autoband.com.ua/#contacts</loc>
+    <loc>https://autoband.com.ua/contacts</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
 </urlset>
