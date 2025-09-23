@@ -3,6 +3,7 @@ import { useState } from "react";
 import theme from "@/constants/theme";
 import { brandsBlockData } from "./brandsBlock.data";
 import * as styles from "./styles";
+import Image from "next/image";
 
 export default function BrandsBlock() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -17,7 +18,7 @@ export default function BrandsBlock() {
       <div css={styles.grid}>
         {brandsBlockData.brands.map((brand, index) => (
           <div key={index} css={styles.card}>
-            <img src={brand.img} alt={brand.name} css={styles.brandImage} />
+            <Image src={brand.img} alt={brand.name} css={styles.brandImage} />
             <h3 css={styles.brandTitle}>{brand.name}</h3>
           </div>
         ))}
