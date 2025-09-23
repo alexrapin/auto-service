@@ -8,13 +8,20 @@ export default function BrandsBlock() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleToggle = () => {
-    setIsExpanded(prevState => !prevState);
+    setIsExpanded((prevState) => !prevState);
   };
 
   return (
-    <section id='about' css={styles.section(theme)}>
+    <section id="about" css={styles.section(theme)}>
       <h2 css={styles.mainTitle(theme)}>{brandsBlockData.title}</h2>
-      <img src={brandsBlockData.logos} alt="Brands" css={styles.logoImage} />
+      <div css={styles.grid}>
+        {brandsBlockData.brands.map((brand, index) => (
+          <div key={index} css={styles.card}>
+            <img src={brand.img} alt={brand.name} css={styles.brandImage} />
+            <h3 css={styles.brandTitle}>{brand.name}</h3>
+          </div>
+        ))}
+      </div>
 
       <div css={styles.contentWrapper}>
         {brandsBlockData.visibleContent.map((block, index) => (
@@ -23,18 +30,22 @@ export default function BrandsBlock() {
             <p css={styles.contentDescription}>{block.description}</p>
           </div>
         ))}
-        
+
         <div css={styles.hiddenContent(isExpanded)}>
           {brandsBlockData.hiddenContent.map((block, index) => (
             <div key={`hidden-${index}`}>
-              {block.title && <h3 css={styles.contentTitle(theme)}>{block.title}</h3>}
+              {block.title && (
+                <h3 css={styles.contentTitle(theme)}>{block.title}</h3>
+              )}
               <p css={styles.contentDescription}>{block.description}</p>
             </div>
           ))}
         </div>
 
         <button onClick={handleToggle} css={styles.button}>
-          {isExpanded ? brandsBlockData.buttonTextHide : brandsBlockData.buttonTextShow}
+          {isExpanded
+            ? brandsBlockData.buttonTextHide
+            : brandsBlockData.buttonTextShow}
         </button>
       </div>
     </section>
