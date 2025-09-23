@@ -6,7 +6,7 @@ export default function HomePage() {
     <>
       <Head>
         <title>
-          Autoband (СТО "Бумер") — автосервіс у Миколаєві | Ремонт авто,
+          Autoband (СТО &quot;Бумер&quot;) — автосервіс у Миколаєві | Ремонт авто,
           діагностика
         </title>
 
