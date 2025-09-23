@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
 import theme from "@/constants/theme";
 import { faqBlockData } from "./faqBlock.data";
