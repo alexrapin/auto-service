@@ -18,7 +18,13 @@ export default function BrandsBlock() {
       <div css={styles.grid}>
         {brandsBlockData.brands.map((brand, index) => (
           <div key={index} css={styles.card}>
-            <Image src={brand.img} alt={brand.name} css={styles.brandImage} />
+            <Image
+              width={60}
+              height={60}
+              src={brand.img}
+              alt={brand.name}
+              css={styles.brandImage}
+            />
             <h3 css={styles.brandTitle}>{brand.name}</h3>
           </div>
         ))}
