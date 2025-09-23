@@ -1,5 +1,6 @@
 import Advantages from "./Advantages";
 import BrandsBlock from "./BrandsBlock";
+import FaqBlock from "./FaqBlock";
 import FormBlock from "./FormBlock";
 import Hero from "./Hero";
 import Services from "./Services";
@@ -16,6 +17,7 @@ export default function Home() {
       <Services />
       <FormBlock />
       <BrandsBlock />
+      <FaqBlock />
     </>
   );
 }

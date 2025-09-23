@@ -29,6 +29,7 @@ export const list = (theme: Theme) => css`
   display: flex;
   gap: 20px;
   padding-top: 30px;
+  min-height: 350px;
 
   li {
     background: #f3f3f3;
@@ -39,7 +40,7 @@ export const list = (theme: Theme) => css`
     transition: all 0.3s ease;
 
     &:hover {
-  background: #002469;
+      background: #002469;
       box-shadow: 2px 8px 32px rgba(0, 0, 0, 0.12);
     }
 
@@ -61,6 +62,7 @@ export const list = (theme: Theme) => css`
       font-size: 20px;
       margin: 12px 0 8px;
       text-transform: uppercase;
+      text-align: center;
     }
 
     h4 {

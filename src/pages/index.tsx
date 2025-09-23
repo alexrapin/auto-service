@@ -5,25 +5,31 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Автосервіс AUTOBAND — СТО Миколаїв, ремонт авто</title>
+        <title>
+          Autoband (СТО "Бумер") — автосервіс у Миколаєві | Ремонт авто,
+          діагностика
+        </title>
+
         <meta
           name="description"
-          content="Професійний автосервіс AUTOBAND у Миколаєві. Діагностика, ремонт, запчастини. Запис онлайн!"
+          content="СТО 'Бумер' (Autoband) у Миколаєві. Професійний автосервіс: ремонт ходової, двигуна, заміна масла, діагностика авто. Надійність і якість вже понад 20 років."
         />
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <meta
           name="keywords"
-          content="автосервіс, Миколаїв, ремонт авто, автодіагностика, запчастини"
+          content="СТО Бумер, Autoband, автосервис Николаев, автосервіс Миколаїв, ремонт авто Миколаїв, СТО Николаев, автодиагностика, заміна масла, ремонт ходової, автосервіс"
         />
 
         {/* Open Graph — соцмережі */}
         <meta
           property="og:title"
-          content="Автосервіс AUTOBAND — СТО Миколаїв"
+          content="СТО 'Бумер' (Autoband) у Миколаєві"
         />
         <meta
           property="og:description"
-          content="Якісний автосервіс у Миколаєві: ремонт, діагностика, запчастини. Запис онлайн!"
+          content="Надійний автосервіс у Миколаєві. Ремонт двигуна, ходової, діагностика та запчастини. Запис онлайн на СТО 'Бумер' (Autoband)."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://autoband.com.ua/" />
@@ -43,7 +49,8 @@ export default function HomePage() {
               "@context": "https://schema.org",
               "@type": "AutoRepair",
               name: "Автосервіс AUTOBAND",
-              image: "https://autoband.com.ua/logo.png",
+              alternateName: "СТО Бумер",
+              image: "https://autoband.com.ua/favicon.ico",
               telephone: "+380677216945",
               address: {
                 "@type": "PostalAddress",
@@ -64,6 +71,7 @@ export default function HomePage() {
                 "Ремонт ходової",
                 "Заміна масла",
                 "Ремонт двигуна",
+                "Діагностика авто",
               ],
             }),
           }}
