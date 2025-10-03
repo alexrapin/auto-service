@@ -6,10 +6,18 @@ import theme from "@/constants/theme";
 
 import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
+import type { EmotionCache } from "@emotion/cache";
 
-const cache = createCache({ key: "css", prepend: true });
+// Client-side cache, used when no emotionCache is provided by the server
+const clientSideEmotionCache = createCache({ key: "css", prepend: true });
 
-export default function App({ Component, pageProps }: AppProps) {
+type MyAppProps = AppProps & {
+  emotionCache?: EmotionCache;
+};
+
+export default function App({ Component, pageProps, emotionCache }: MyAppProps) {
+  const cache = emotionCache ?? clientSideEmotionCache;
+
   return (
     <CacheProvider value={cache}>
       <ThemeProvider theme={theme}>
