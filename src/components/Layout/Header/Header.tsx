@@ -3,13 +3,20 @@ import theme from "@/constants/theme";
 import { headerData } from "./header.data";
 import * as styles from "./style";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
     <header css={styles.section}>
       <div css={styles.top(theme)}>
         <Link href="/">
-          <img src={headerData.logoImg} alt="Logo" css={styles.logo(theme)} />
+          <Image
+            width={150}
+            height={50}
+            src={headerData.logoImg}
+            alt="Logo"
+            css={styles.logo(theme)}
+          />
         </Link>
         <div>
           <p css={styles.phone}>{headerData.phone}</p>

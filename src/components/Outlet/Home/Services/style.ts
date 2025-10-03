@@ -56,6 +56,7 @@ export const list = (theme: Theme) => css`
 
     img {
       height: 170px;
+      width: auto;
     }
 
     h3 {

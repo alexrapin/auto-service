@@ -3,13 +3,20 @@ import theme from "@/constants/theme";
 import { footerData } from "./footer.data";
 import * as styles from "./style";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer id='contacts' css={styles.footer}>
+    <footer id="contacts" css={styles.footer}>
       <div css={styles.top(theme)}>
         <Link href="/" css={styles.logoBlock}>
-          <img src={footerData.logoImg} alt="Logo" css={styles.logo} />
+          <Image
+            width={100}
+            height={40}
+            src={footerData.logoImg}
+            alt="Logo"
+            css={styles.logo}
+          />
         </Link>
 
         <div>
@@ -25,10 +32,12 @@ export default function Footer() {
         <div css={styles.contactsBlock}>
           <div css={styles.phones}>
             <div css={styles.phoneRow}>
-              <img
+              <Image
                 src={footerData.images.phone}
                 alt="phone"
                 css={styles.contactIcon}
+                width={20}
+                height={20}
               />
               <a href={footerData.phoneList.href}>
                 {footerData.phoneList.label}
@@ -36,10 +45,12 @@ export default function Footer() {
             </div>
           </div>
           <div css={styles.emailRow}>
-            <img
+            <Image
               src={footerData.images.gmail}
               alt="mail"
               css={styles.contactIcon}
+              width={20}
+              height={20}
             />
             <a href={`mailto:${footerData.email}`}>{footerData.email}</a>
           </div>
@@ -50,10 +61,12 @@ export default function Footer() {
               rel="noopener noreferrer"
               css={styles.addressRow}
             >
-              <img
+              <Image
                 src={footerData.images.location}
                 alt="address"
                 css={styles.contactIcon}
+                width={20}
+                height={20}
               />
               <span>{footerData.address}</span>
             </a>
@@ -61,10 +74,12 @@ export default function Footer() {
           <div css={styles.workTime}>
             {footerData.workTime.map((row) => (
               <div css={styles.workTimeRow} key={row}>
-                <img
+                <Image
                   src={footerData.images.time}
                   alt="clock"
                   css={styles.contactIcon}
+                  width={20}
+                  height={20}
                 />
                 <span>{row}</span>
               </div>

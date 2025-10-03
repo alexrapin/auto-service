@@ -3,9 +3,7 @@ import { heroData } from "./hero.data";
 import { Theme } from "@mui/material";
 
 export const hero = (theme: Theme) => css`
-  background-image: url(${heroData.bgImage});
-  background-size: cover;
-  background-position: center;
+  position: relative;
   padding: 200px 0;
   color: white;
 
@@ -16,6 +14,13 @@ export const hero = (theme: Theme) => css`
 
   position: relative;
   overflow: hidden;
+
+  /* Next/Image with the fill prop will be absolutely positioned; make sure it sits behind overlay */
+  img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
 
   &::before {
     content: "";

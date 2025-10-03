@@ -1,5 +1,5 @@
 export const headerData = {
-  logoImg: './images/header/Logo.png',
+  logoImg: '/images/header/Logo.png',
   phone: '+38 (067) 721-69-45',
   text: 'Замовити дзвінок',
   links: [

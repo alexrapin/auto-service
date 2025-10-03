@@ -5,6 +5,7 @@ import * as styles from "./style";
 import { useState } from "react";
 import theme from "@/constants/theme";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Subscribe() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
@@ -69,11 +70,13 @@ export default function Subscribe() {
             onMouseEnter={() => setHoveredId(String(id))}
             onMouseLeave={() => setHoveredId(null)}
           >
-            <img
+            <Image
               css={styles.navImg(theme)}
               src={img}
               alt={title}
               data-active={hoveredId === String(id)}
+              width={40}
+              height={40}
             />
             <div css={styles.circle(theme)}></div>
             <span css={styles.navText(theme)}>{title}</span>
@@ -82,7 +85,13 @@ export default function Subscribe() {
         <div css={styles.line}></div>
       </nav>
       <div css={styles.subscribeContainer(theme)}>
-        <img src={subscribeData.image} alt="garageImage" css={styles.image} />
+        <Image
+          width={600}
+          height={400}
+          src={subscribeData.image}
+          alt="garageImage"
+          css={styles.image}
+        />
         <form css={styles.form} onSubmit={handleSubmit}>
           <h2 css={styles.title}>{subscribeData.formData.title}</h2>
           <p css={styles.subtitle}>{subscribeData.formData.subtitle}</p>

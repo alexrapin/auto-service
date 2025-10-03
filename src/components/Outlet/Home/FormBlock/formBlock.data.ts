@@ -1,5 +1,5 @@
 export const formBlockData = {
-  bgImage: "./images/formBlock/imgCar.png",
+  bgImage: "/images/formBlock/imgCar.png",
   fields: [
     { name: "name", placeholder: "Ваше ім'я", type: "text" },
     { name: "phone", placeholder: "Номер телефону", type: "text" },

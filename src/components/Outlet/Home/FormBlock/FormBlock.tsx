@@ -3,6 +3,7 @@ import theme from "@/constants/theme";
 import { formBlockData } from "./formBlock.data";
 import * as styles from "./style";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function FormBlock() {
   const [formData, setFormData] = useState<{ [key: string]: string }>({
@@ -86,7 +87,12 @@ export default function FormBlock() {
           <div>{formBlockData.contact.phones}</div>
         </div>
         <div css={styles.carImg(theme)}>
-          <img src={formBlockData.bgImage} alt="car" />
+          <Image
+            src={formBlockData.bgImage}
+            alt="car"
+            width={500}
+            height={300}
+          />
         </div>
       </div>
 

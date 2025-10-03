@@ -1,5 +1,5 @@
 export const subscribeData = {
-  image: "./images/subscribe/subscribeImg.jpg",
+  image: "/images/subscribe/subscribeImg.jpg",
   nav: [
     {
       id: 1,
