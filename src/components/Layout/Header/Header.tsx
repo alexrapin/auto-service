@@ -11,7 +11,7 @@ export default function Header() {
       <div css={styles.top(theme)}>
         <Link href="/">
           <Image
-            width={150}
+            width={100}
             height={50}
             src={headerData.logoImg}
             alt="Logo"
