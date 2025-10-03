@@ -12,6 +12,8 @@ export default function Hero() {
         alt={heroData.title}
         fill
         priority
+        fetchPriority="high"
+        loading="eager"
         sizes="100vw"
         style={{ objectFit: "cover", objectPosition: "center" }}
       />

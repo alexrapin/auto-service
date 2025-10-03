@@ -31,6 +31,7 @@ a {
   src: url('/fonts/Inter_18pt-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -38,7 +39,10 @@ a {
   src: url('/fonts/Inter_18pt-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
+
+/* Using Google Fonts for Inter now; local @font-face removed to avoid duplicate loading */
 
 body {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
